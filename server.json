@@ -1,0 +1,11 @@
+{
+    "web":{
+        "rewrites":{
+            "enable":"true"
+        }
+    },
+    "app":{
+        "cfengine":"adobe@2021",
+        "_prior_cfengine":"lucee"
+    }
+}
