@@ -17,11 +17,12 @@ component extends="coldbox.system.EventHandler" {
         prc.user.setLastName( createUuid() );
         prc.user.setUpdatedDate( now() );
 
+        // attempt to save the entity via async
         var f = async().newFuture( function() {
             
             logger.warn( "I started!" );
 
-            sleep( 2000 );
+            sleep( 2000 ); // ensure this happens after the request
 
             prc.user.save();
             logger.warn( "I finished!" );
